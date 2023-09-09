@@ -7,7 +7,7 @@ import { absoluteUrl } from "@/lib/utils";
 
 const settingsUrl: string = absoluteUrl('/settings');
 
-export const GET = async () => {
+export async function GET() {
 	try {
 		const {userId} = auth();
 		const user = await currentUser();
@@ -35,7 +35,6 @@ export const GET = async () => {
 			mode: "subscription",
 			billing_address_collection: "auto",
 			customer_email: user.emailAddresses[0].emailAddress,
-			
 			line_items: [
 				{
 					price_data: {
