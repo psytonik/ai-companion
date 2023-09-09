@@ -35,6 +35,7 @@ export const GET = async () => {
 			mode: "subscription",
 			billing_address_collection: "auto",
 			customer_email: user.emailAddresses[0].emailAddress,
+			
 			line_items: [
 				{
 					price_data: {
