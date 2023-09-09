@@ -60,7 +60,7 @@ export async function GET() {
 	} catch (e) {
 		if(e instanceof Error) {
 			console.log(e.message, '[STRIPE_GET]');
-			new NextResponse('Internal Error', { status: 500 })
+			return new NextResponse('Internal Error', { status: 500 })
 		}
 	}
 }
